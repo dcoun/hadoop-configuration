@@ -38,6 +38,8 @@ export HADOOP_MAPRED_PID_DIR=$HADOOP_TMP_PREFIX/pids/mapred
 export YARN_HOME=$HADOOP_PREFIX
 export YARN_CONF_DIR=$HADOOP_PREFIX/etc/hadoop
 export YARN_OPTS="$HADOOP_OPTS -Xmx3221225472 -Djava.net.preferIPv4Stack=true $YARN_OPTS"
+export YARN_LOG_DIR=$HADOOP_TMP_PREFIX/logs/yarn
+export YARN_PID_DIR=$HADOOP_TMP_PREFIX/pids/yarn
 
 # hbase
 export HBASE_LOG_DIR=$HADOOP_TMP_PREFIX/logs/hbase
