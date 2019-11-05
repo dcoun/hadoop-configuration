@@ -38,7 +38,7 @@
 
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>${HADOOP_TMP_PREFIX}/zk</value>
+    <value>${ZOO_DATA_DIR}</value>
   </property>
 
   <property>
