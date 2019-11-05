@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -13,7 +13,90 @@
   limitations under the License. See accompanying LICENSE file.
 -->
 <configuration>
+  <property>
+    <name>yarn.resourcemanager.address</name>
+    <value>localhost:8032</value>
+  </property>
 
-<!-- Site specific YARN configuration properties -->
+  <property>
+    <name>yarn.nodemanager.local-dirs</name>
+    <value>${HADOOP_TMP_PREFIX}/yarn/nm</value>
+    <description>Multiple paths help spread disk i/o.</description>
+  </property>
 
+  <property>
+    <name>yarn.nodemanager.log-dirs</name>
+    <value>${HADOOP_TMP_PREFIX}/logs/nm</value>
+    <description>Multiple paths help spread disk i/o.</description>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.remote-app-log-dir</name>
+    <value>${HADOOP_TMP_PREFIX}/logs/nm</value>
+    <description>
+      HDFS directory where the application logs are moved on application completion.
+		  Need to set appropriate permissions.
+		  Only applicable if log-aggregation is enabled.
+    </description>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>spark_shuffle,mapreduce_shuffle</value>
+    <!-- <value>mapreduce_shuffle</value> -->
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.aux-services.spark_shuffle.class</name>
+    <value>org.apache.spark.network.yarn.YarnShuffleService</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <!-- <value>org.apache.spark.network.yarn.YarnShuffleService</value> -->
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+
+  <!--
+  <property>
+    <name>yarn.nodemanager.vmem-check-enabled</name>
+    <value>false</value>
+    <description>컨테이너에 대한 가상 메모리 제한이 있는지 확인합니다.</description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.pmem-check-enabled</name>
+    <value>false</value>
+    <description>컨테이너에 대한 물리 메모리 제한이 있는지 확인합니다.</description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.vmem-pmem-ratio</name>
+    <value>2.1</value>
+    <description>컨테이너의 실제 메모리 대비 가상 메모리 사용 비율을 나타냅니다 (default 2.1)</description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>2048</value>
+    <description>
+        각 노드매니저가 컨테이너 할당에 사용할 메모리 크기를 나타내며, 다음과 같은 공식으로 계산합니다.
+        * 컨테이너 할당용 메모리 크기 = 서버 메모리 크기 - (얀을 제외한 다른 소프트웨어들이 사용할 메모리 크기)
+    </description>
+  </property>
+  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>1024</value>
+    <description>하나의 컨테이너 할당에 필요한 최소 메모리 크기입니다.</description>
+  </property>
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+    <description>하나의 컨테이너 할당에 필요한 최대 메모리 크기입니다.</description>
+  </property>
+  -->
+
+  <!--
+  <property>
+    <name>yarn.application.classpath</name>
+    <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*,$HADOOP_PREFIX/lib/native/spark-2.1.0-yarn-shuffle.jar</value>
+  </property>
+-->
 </configuration>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl" ?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,36 +17,51 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-  <!-- see: hadoop.tmp.dir in core-site.xml -->
-  <!-- 
   <property>
-		<name>dfs.namenode.name.dir</name>
-		<value>${HADOOP_TMP_PREFIX}/dfs/name</value>
-	</property>
-  
-  <property>
-    <name>dfs.namenode.checkpoint.dir</name>
-    <value>${HADOOP_TMP_PREFIX}/dfs/secondary</value>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+    <description>Execution framework set to Hadoop YARN.</description>
   </property>
 
   <property>
-		<name>dfs.datanode.data.dir</name>
-		<value>${HADOOP_TMP_PREFIX}/dfs/namesecondary</value>
+    <name>mapreduce.jobhistory.address</name>
+    <value>localhost:10020</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobhistory.webapp.address</name>
+    <value>localhost:19888</value>
+  </property>
+
+  <!--
+  <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>1024</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>1024</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.java.opts.max.heap</name>
+    <value>819</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.java.opts.max.heap</name>
+    <value>819</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-Xmx819m</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-Xmx819m</value>
   </property>
   -->
-
-  <property>
-    <name>dfs.namenode.http-address</name>
-    <value>localhost:50070</value>
-  </property>
-
-  <property>
-    <name>dfs.secondary.http.address</name>
-    <value>localhost:50090</value>
-  </property>
-
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
 </configuration>
