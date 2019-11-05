@@ -25,7 +25,7 @@
 
   <property>
     <name>hadoop.tmp.dir</name>
-    <value>${HADOOP_TMP_PREFIX}/dfs</value>
+    <value>/Users/Shared/hadoop/dfs</value>
     <description>
       A base for other temporary directories.
       - dfs.name.dir=${hadoop.tmp.dir}/dfs/name

@@ -58,7 +58,7 @@ export ZOO_LOG_DIR=$HADOOP_TMP_PREFIX/logs/zk
 # livy
 export SPARK_HOME=$SPARK_PREFIX
 export SPARK_CONF_DIR=$SPARK_PREFIX/conf
-export LIVY_LOG_DIR=/Users/Shared/hadoop/logs/livy
-export LIVY_PID_DIR=/Users/Shared/hadoop/pids/livy
+export LIVY_LOG_DIR=$HADOOP_TMP_PREFIX/logs/livy
+export LIVY_PID_DIR=$HADOOP_TMP_PREFIX/pids/livy
 
 export PATH="$HADOOP_PREFIX/bin:$HBASE_PREFIX/bin:$SPARK_PREFIX/bin:$ZOOKEEPER_PREFIX/bin:$LIVY_PREFIX/bin::$PATH"

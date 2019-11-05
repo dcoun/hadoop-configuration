@@ -21,17 +21,17 @@
   <!-- 
   <property>
 		<name>dfs.namenode.name.dir</name>
-		<value>${HADOOP_TMP_PREFIX}/dfs/name</value>
+		<value>/Users/Shared/hadoop/dfs/name</value>
 	</property>
   
   <property>
     <name>dfs.namenode.checkpoint.dir</name>
-    <value>${HADOOP_TMP_PREFIX}/dfs/secondary</value>
+    <value>/Users/Shared/hadoop/dfs/secondary</value>
   </property>
 
   <property>
 		<name>dfs.datanode.data.dir</name>
-		<value>${HADOOP_TMP_PREFIX}/dfs/namesecondary</value>
+		<value>/Users/Shared/hadoop/dfs/namesecondary</value>
   </property>
   -->
 

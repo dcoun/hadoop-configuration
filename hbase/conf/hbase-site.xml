@@ -38,7 +38,7 @@
 
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>${ZOO_DATA_DIR}</value>
+    <value>/Users/Shared/hadoop/zk</value>
   </property>
 
   <property>
