@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,36 +17,5 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-  <!-- see: hadoop.tmp.dir in core-site.xml -->
-  <!-- 
-  <property>
-		<name>dfs.namenode.name.dir</name>
-		<value>/Users/Shared/hadoop/dfs/name</value>
-	</property>
-  
-  <property>
-    <name>dfs.namenode.checkpoint.dir</name>
-    <value>/Users/Shared/hadoop/dfs/secondary</value>
-  </property>
 
-  <property>
-		<name>dfs.datanode.data.dir</name>
-		<value>/Users/Shared/hadoop/dfs/namesecondary</value>
-  </property>
-  -->
-
-  <property>
-    <name>dfs.namenode.http-address</name>
-    <value>localhost:50070</value>
-  </property>
-
-  <property>
-    <name>dfs.secondary.http.address</name>
-    <value>localhost:50090</value>
-  </property>
-
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
 </configuration>
