@@ -64,7 +64,7 @@
 export SPARK_MASTER_HOST=127.0.0.1
 export SPARK_MASTER_IP=127.0.0.1
 
-export SPARK_LOCAL_DIRS=${HADOOP_TMP_PREFIX}/spark
+export SPARK_LOCAL_DIRS=/Users/Shared/hadoop/spark
 
-export SPARK_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/spark
-export SPARK_PID_DIR=${HADOOP_TMP_PREFIX}/pids/spark
+export SPARK_LOG_DIR=/Users/Shared/hadoop/logs/spark
+export SPARK_PID_DIR=/Users/Shared/hadoop/pids/spark

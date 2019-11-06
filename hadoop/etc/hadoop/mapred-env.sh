@@ -27,5 +27,5 @@ export HADOOP_MAPRED_ROOT_LOGGER=INFO,RFA
 #export HADOOP_MAPRED_IDENT_STRING= #A string representing this instance of hadoop. $USER by default
 #export HADOOP_MAPRED_NICENESS= #The scheduling priority for daemons. Defaults to 0.
 
-export HADOOP_MAPRED_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/mapred
-export HADOOP_MAPRED_PID_DIR=${HADOOP_TMP_PREFIX}/pids/mapred
+export HADOOP_MAPRED_LOG_DIR=/Users/Shared/hadoop/logs/mapred
+export HADOOP_MAPRED_PID_DIR=/Users/Shared/hadoop/pids/mapred
