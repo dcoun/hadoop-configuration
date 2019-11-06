@@ -60,3 +60,11 @@
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 # - SPARK_NO_DAEMONIZE  Run the proposed command in the foreground. It will not output a PID file.
+
+export SPARK_MASTER_HOST=127.0.0.1
+export SPARK_MASTER_IP=127.0.0.1
+
+export SPARK_LOCAL_DIRS=${HADOOP_TMP_PREFIX}/spark
+
+export SPARK_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/spark
+export SPARK_PID_DIR=${HADOOP_TMP_PREFIX}/pids/spark

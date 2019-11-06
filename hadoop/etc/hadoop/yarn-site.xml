@@ -18,6 +18,7 @@
     <value>localhost:8032</value>
   </property>
 
+  <!-- FIXME: 안먹음 -->
   <property>
     <name>yarn.nodemanager.local-dirs</name>
     <value>/Users/Shared/hadoop/yarn/nm</value>
