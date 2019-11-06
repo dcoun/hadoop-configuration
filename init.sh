@@ -1,3 +1,12 @@
+# OSX 에서는 안됨;
+
+# sudo visudo
+# %hadoop ALL=(ALL) NOPASSWD: ALL
+
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hadoop
+sudo adduser --ingroup hadoop hdfs
+
 sudo -u hdfs hdfs dfs -mkdir -p /user/${USER}
 sudo -u hdfs hdfs dfs -chown ${USER}:${USER} /user/${USER}
 
