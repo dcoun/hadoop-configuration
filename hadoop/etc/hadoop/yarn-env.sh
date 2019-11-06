@@ -13,6 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+export HADOOP_PREFIX=/Library/Hadoop/hadoop
+export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
+
+export HADOOP_YARN_HOME=${HADOOP_PREFIX}
+export YARN_CONF_DIR=${HADOOP_PREFIX}/etc/hadoop
+export YARN_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/yarn
+export YARN_PID_DIR=${HADOOP_TMP_PREFIX}/pids/yarn
+
 # User for YARN daemons
 export HADOOP_YARN_USER=${HADOOP_YARN_USER:-yarn}
 

@@ -21,6 +21,11 @@
 # set JAVA_HOME in this file, so that it is correctly defined on
 # remote nodes.
 
+export HADOOP_PREFIX=/Library/Hadoop/hadoop
+export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
+export HADOOP_CONF_DIR=${HADOOP_PREFIX}/etc/hadoop
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
+
 # The java implementation to use.
 # export JAVA_HOME=${JAVA_HOME}
 
@@ -70,7 +75,7 @@ export HADOOP_CLIENT_OPTS="-Xmx512m $HADOOP_CLIENT_OPTS"
 export HADOOP_SECURE_DN_USER=${HADOOP_SECURE_DN_USER}
 
 # Where log files are stored.  $HADOOP_HOME/logs by default.
-export HADOOP_LOG_DIR=/Users/Shared/hadoop/logs/hadoop
+export HADOOP_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/hadoop
 
 # Where log files are stored in the secure data environment.
 export HADOOP_SECURE_DN_LOG_DIR=${HADOOP_LOG_DIR}/${HADOOP_HDFS_USER}
@@ -92,8 +97,8 @@ export HADOOP_SECURE_DN_LOG_DIR=${HADOOP_LOG_DIR}/${HADOOP_HDFS_USER}
 # NOTE: this should be set to a directory that can only be written to by 
 #       the user that will run the hadoop daemons.  Otherwise there is the
 #       potential for a symlink attack.
-export HADOOP_PID_DIR=/Users/Shared/hadoop/pids/hadoop
-export HADOOP_SECURE_DN_PID_DIR=/Users/Shared/hadoop/pids/hadoop
+export HADOOP_PID_DIR=${HADOOP_TMP_PREFIX}/pids/hadoop
+export HADOOP_SECURE_DN_PID_DIR=${HADOOP_TMP_PREFIX}/pids/hadoop
 
 # A string representing this instance of hadoop. $USER by default.
 export HADOOP_IDENT_STRING=$USER
