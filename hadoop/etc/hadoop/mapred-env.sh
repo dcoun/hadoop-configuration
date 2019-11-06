@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# export JAVA_HOME=/home/y/libexec/jdk1.6.0/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 
 export HADOOP_JOB_HISTORYSERVER_HEAPSIZE=1000
 
@@ -25,3 +25,6 @@ export HADOOP_MAPRED_ROOT_LOGGER=INFO,RFA
 #export HADOOP_MAPRED_PID_DIR= # The pid files are stored. /tmp by default.
 #export HADOOP_MAPRED_IDENT_STRING= #A string representing this instance of hadoop. $USER by default
 #export HADOOP_MAPRED_NICENESS= #The scheduling priority for daemons. Defaults to 0.
+
+export HADOOP_MAPRED_LOG_DIR=/Users/Shared/hadoop/logs/mapred
+export HADOOP_MAPRED_PID_DIR=/Users/Shared/hadoop/pids/mapred

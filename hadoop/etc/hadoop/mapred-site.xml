@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,15 +17,19 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-  <property>
-		<name>fs.defaultFS</name>
-		<value>hdfs://localhost:9000/</value>
-		<description>NameNode URI Use HDFS as file storage engine</description>
-	</property>
-  
 	<property>
-		<name>hadoop.tmp.dir</name>
-		<value>/Users/Shared/hadoop/tmp</value>
-		<description>Temporary Directory.</description>
+		<name>mapreduce.framework.name</name>
+		<value>yarn</value>
+		<description>Execution framework set to Hadoop YARN.</description>
 	</property>
+
+  <property>
+    <name>mapreduce.jobhistory.address</name>
+    <value>localhost:10020</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobhistory.webapp.address</name>
+    <value>localhost:19888</value>
+  </property>
 </configuration>
