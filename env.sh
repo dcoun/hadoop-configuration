@@ -2,7 +2,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/latest/Contents/Home"
 export SBT_HOME="/Library/Sbt/latest"
 export M2_HOME="/Library/Maven/latest"
 
-export PATH="$JAVA_HOME/bin:$SBT_HOME/bin:$M2_HOME/bin::$PATH"
+export PATH="$PATH:$JAVA_HOME/bin:$SBT_HOME/bin:$M2_HOME/bin"
 
 ## Hadoop Prefix
 export HADOOP_PREFIX=/Library/Hadoop/hadoop
@@ -22,9 +22,9 @@ export HADOOP_HDFS_HOME=${HADOOP_PREFIX}
 export HADOOP_CONF_DIR=${HADOOP_PREFIX}/etc/hadoop
 
 export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
-export HADOOP_OPTS="-Djava.library.path=${HADOOP_PREFIX}/lib/native"
+export JAVA_LIBRARY_PATH="$JAVA_LIBRARY_PATH:${HADOOP_COMMON_LIB_NATIVE_DIR}"
 export HADOOP_CLASSPATH=${HADOOP_PREFIX}/etc/hadoop
-export CLASSPATH=$CLASSPATH:${HADOOP_PREFIX}/lib/*:.
+export CLASSPATH="$CLASSPATH:${HADOOP_CLASSPATH}:${HADOOP_COMMON_LIB_NATIVE_DIR}"
 
 ## mapred
 # export HADOOP_JOB_HISTORYSERVER_HEAPSIZE=1000
@@ -61,4 +61,4 @@ export SPARK_CONF_DIR=${SPARK_PREFIX}/conf
 export LIVY_LOG_DIR=${HADOOP_TMP_PREFIX}/logs/livy
 export LIVY_PID_DIR=${HADOOP_TMP_PREFIX}/pids/livy
 
-export PATH="${HADOOP_PREFIX}/bin:${HBASE_PREFIX}/bin:${SPARK_PREFIX}/bin:${ZOOKEEPER_PREFIX}/bin:${LIVY_PREFIX}/bin::$PATH"
+export PATH="$PATH:${HADOOP_PREFIX}/bin:${HBASE_PREFIX}/bin:${SPARK_PREFIX}/bin:${ZOOKEEPER_PREFIX}/bin:${LIVY_PREFIX}/bin"

@@ -15,6 +15,7 @@
 
 export HADOOP_PREFIX=/Library/Hadoop/hadoop
 export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
 
 export HADOOP_YARN_HOME=${HADOOP_PREFIX}
 export YARN_CONF_DIR=${HADOOP_PREFIX}/etc/hadoop
@@ -123,5 +124,8 @@ YARN_OPTS="$YARN_OPTS -Dhadoop.root.logger=${YARN_ROOT_LOGGER:-INFO,console}"
 YARN_OPTS="$YARN_OPTS -Dyarn.root.logger=${YARN_ROOT_LOGGER:-INFO,console}"
 if [ "x$JAVA_LIBRARY_PATH" != "x" ]; then
   YARN_OPTS="$YARN_OPTS -Djava.library.path=$JAVA_LIBRARY_PATH"
-fi  
+fi
 YARN_OPTS="$YARN_OPTS -Dyarn.policy.file=$YARN_POLICYFILE"
+
+YARN_OPTS="$YARN_OPTS -Djava.library.path=$HADOOP_COMMON_LIB_NATIVE_DIR"
+YARN_OPTS="$YARN_OPTS -Xmx3221225472"
