@@ -18,7 +18,6 @@
     <value>localhost:8032</value>
   </property>
 
-  <!-- FIXME: 안먹음 -->
   <property>
     <name>yarn.nodemanager.local-dirs</name>
     <value>/Users/Shared/hadoop/yarn/nm</value>
@@ -27,17 +26,28 @@
 
   <property>
     <name>yarn.nodemanager.log-dirs</name>
-    <value>/Users/Shared/hadoop/logs/nm</value>
-    <description>Multiple paths help spread disk i/o.</description>
+    <value>/Users/Shared/hadoop/logs/yarn/nm</value>
+    <description>
+      NodeManager가 컨테이너 로그 파일을 저장하는 로컬 파일 시스템 상의 디렉토리 목록입니다
+      Multiple paths help spread disk i/o.
+    </description>
   </property>
 
   <property>
     <name>yarn.nodemanager.remote-app-log-dir</name>
-    <value>/Users/Shared/hadoop/logs/nm</value>
+    <value>/user/yarn/nm</value>
     <description>
-      HDFS directory where the application logs are moved on application completion.
+      애플리케이션이 완료되면 애플리케이션 로그를 저장할 HDFS 디렉토리입니다.
 		  Need to set appropriate permissions.
 		  Only applicable if log-aggregation is enabled.
+    </description>
+  </property>
+
+  <property>
+    <name>hadoop.log.dir</name>
+    <value>/Users/Shared/hadoop/logs/yarn</value>
+    <description>
+      ResourceManager/NodeManager 로그 파일을 저장하는 디렉토리입니다.
     </description>
   </property>
 
