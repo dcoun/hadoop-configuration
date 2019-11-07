@@ -61,6 +61,8 @@
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 # - SPARK_NO_DAEMONIZE  Run the proposed command in the foreground. It will not output a PID file.
 
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/latest/Contents/Home"
+
 export HADOOP_PREFIX=/Library/Hadoop/hadoop
 export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
 

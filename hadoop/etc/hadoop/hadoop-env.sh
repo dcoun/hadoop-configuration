@@ -27,7 +27,7 @@ export HADOOP_CONF_DIR=${HADOOP_PREFIX}/etc/hadoop
 export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
 
 # The java implementation to use.
-# export JAVA_HOME=${JAVA_HOME}
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/latest/Contents/Home"
 
 # The jsvc implementation to use. Jsvc is required to run secure datanodes
 # that bind to privileged ports to provide authentication of data transfer

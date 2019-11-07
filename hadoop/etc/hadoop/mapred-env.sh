@@ -17,7 +17,7 @@ export HADOOP_PREFIX=/Library/Hadoop/hadoop
 export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
 
 # The java implementation to use.
-# export JAVA_HOME=${JAVA_HOME}
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/latest/Contents/Home"
 
 export HADOOP_JOB_HISTORYSERVER_HEAPSIZE=1000
 

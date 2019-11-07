@@ -27,7 +27,7 @@ export HADOOP_TMP_PREFIX=/Users/Shared/hadoop
 # into the startup scripts (bin/hbase, etc.)
 
 # The java implementation to use.  Java 1.7+ required.
-# export JAVA_HOME=${JAVA_HOME}
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/latest/Contents/Home"
 
 # Extra Java CLASSPATH elements.  Optional.
 # export HBASE_CLASSPATH=
